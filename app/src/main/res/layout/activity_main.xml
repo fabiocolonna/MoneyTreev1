@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dueScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/dueBackButton"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="297dp"
+            android:layout_marginTop="618dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="58dp"
+            android:onClick="backToMain"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="179dp"
+            android:layout_marginTop="111dp"
+            android:layout_marginEnd="179dp"
+            android:layout_marginBottom="577dp"
+            android:text="due"
+            android:textColor="#CA1A1A"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="154dp"
+            android:layout_marginBottom="377dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:id="@+id/dueTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="15sp" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="174dp"
+            android:layout_marginTop="362dp"
+            android:layout_marginEnd="175dp"
+            android:layout_marginBottom="326dp"
+            android:text="paid"
+            android:textColor="#449E48"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="405dp"
+            android:layout_marginBottom="126dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:id="@+id/paidTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="15sp" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/monthTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="206dp"
+            android:layout_marginBottom="620dp"
+            android:textAllCaps="false"
+            android:textColor="#CC373737"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recapScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-49dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="131dp"
+            android:layout_marginBottom="642dp"
+            android:text="Purchases"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_marginTop="91dp"
+            android:layout_marginBottom="135dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableLayout
+                android:id="@+id/purchasesTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginEnd="15sp" />
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/recapBackButton"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="297dp"
+            android:layout_marginTop="601dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="75dp"
+            android:onClick="acceptChangesToPurchases"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back" />
+
+        <Button
+            android:id="@+id/okDeleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="387dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="296dp"
+            android:onClick="deletePurchase"
+            android:text="@android:string/ok"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cancelDeleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="387dp"
+            android:layout_marginEnd="214dp"
+            android:layout_marginBottom="296dp"
+            android:onClick="returnToPurchases"
+            android:text="@android:string/cancel"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/confirmDeleteMessage"
+            android:layout_width="233dp"
+            android:layout_height="173dp"
+            android:layout_marginStart="89dp"
+            android:layout_marginTop="279dp"
+            android:layout_marginEnd="89dp"
+            android:layout_marginBottom="279dp"
+            android:background="#CFCFCA"
+            android:padding="16sp"
+            android:text="Are you sure you want to delete the purchase?"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/budgetProgress"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="383dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginBottom="294dp"
+            android:progress="100"
+            android:progressDrawable="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/optionsButton"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="339dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="639dp"
+            android:onClick="setupMenu"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/options" />
+
+        <TextView
+            android:id="@+id/budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="106dp"
+            android:layout_marginTop="158dp"
+            android:layout_marginEnd="105dp"
+            android:layout_marginBottom="454dp"
+            android:text="£0"
+            android:textColor="#3A3A3A"
+            android:textSize="88sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/until"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="277dp"
+            android:layout_marginEnd="97dp"
+            android:layout_marginBottom="408dp"
+            android:text="0 days left"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="371dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="437dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="140dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/newBuyButton"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/newbuybutton"
+                android:elevation="10dp"
+                android:onClick="newBuyScreen"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:textSize="18sp"
+                app:srcCompat="@drawable/shoppingbasketwhite" />
+
+            <ImageButton
+                android:id="@+id/dueCostButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="18dp"
+                android:layout_weight="1"
+                android:background="@drawable/duebutton"
+                android:elevation="10dp"
+                android:onClick="displayDue"
+                android:scaleType="fitCenter"
+                android:textSize="18sp"
+                app:srcCompat="@drawable/dueicon" />
+
+            <ImageButton
+                android:id="@+id/recapButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="18sp"
+                android:layout_weight="1"
+                android:background="@drawable/recapbutton"
+                android:elevation="10dp"
+                android:onClick="displayPurchases"
+                android:padding="9dp"
+                android:scaleType="fitCenter"
+                android:textSize="18sp"
+                app:srcCompat="@drawable/listicon" />
+        </TableRow>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <TableLayout
+            android:id="@+id/budgetTable"
+            android:layout_width="390dp"
+            android:layout_height="513dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Salary"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/salaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/salaryDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/otherIn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Other In"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/otherInText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/otherInDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/housing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Housing"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/housingText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/housingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/councilTax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Council Tax"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/councilTaxText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/councilTaxDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/utilities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Utilities"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/utilitiesText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/utilitiesDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/loans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Loans/CCs"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/loansText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/loansDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/carFinance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Car Finance"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/carFinanceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/carFinanceDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/phoneBills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Phone Bill"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    tools:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/phoneBillsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    tools:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/phoneBillsDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    tools:visibility="visible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvInternet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="TV/Internet"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/tvInternetText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/tvInternetDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                tools:visibility="gone">
+
+                <TextView
+                    android:id="@+id/miscItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="32sp"
+                    android:text="Additional"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/miscItemText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="12dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="12dp"
+                    android:text="on"
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/miscItemDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:ems="10"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#303030"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/setupText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginBottom="639dp"
+            android:text="Budget Setup"
+            android:textColor="#303030"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="618dp"
+            android:layout_marginEnd="307dp"
+            android:layout_marginBottom="65dp"
+            android:onClick="confirmResetMessage"
+            android:text="reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="618dp"
+            android:layout_marginEnd="195dp"
+            android:layout_marginBottom="65dp"
+            android:onClick="editTextEdit"
+            android:text="edit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/acceptButton"
+            android:layout_width="53dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="294dp"
+            android:layout_marginTop="619dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginBottom="58dp"
+            android:background="#FFFFFF"
+            android:onClick="acceptChanges"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/doneicon2" />
+
+        <Button
+            android:id="@+id/okResetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="387dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="296dp"
+            android:onClick="resetBudget"
+            android:text="@android:string/ok"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cancelResetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="387dp"
+            android:layout_marginEnd="214dp"
+            android:layout_marginBottom="296dp"
+            android:onClick="setupMenu"
+            android:text="@android:string/cancel"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/confirmMessage"
+            android:layout_width="233dp"
+            android:layout_height="173dp"
+            android:layout_marginStart="89dp"
+            android:layout_marginTop="279dp"
+            android:layout_marginEnd="89dp"
+            android:layout_marginBottom="279dp"
+            android:background="#CFCFCA"
+            android:padding="16sp"
+            android:text="Are you sure you want to clear all values?"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/purchaseDetailsScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <DatePicker
+            android:id="@+id/purchaseDatePicker"
+            android:layout_width="267dp"
+            android:layout_height="142dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="183dp"
+            android:layout_marginEnd="72dp"
+            android:layout_marginBottom="406dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/supermarketEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="176dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="176dp"
+            android:layout_marginBottom="592dp"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableRow
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="354dp"
+            android:layout_marginEnd="115dp"
+            android:layout_marginBottom="299dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="£"
+                android:textSize="42sp" />
+
+            <EditText
+                android:id="@+id/purchaseCostEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textSize="42sp" />
+        </TableRow>
+
+        <EditText
+            android:id="@+id/purchaseNotesTextEdit"
+            android:layout_width="250dp"
+            android:layout_height="108dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="448dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginBottom="175dp"
+            android:background="@null"
+            android:ems="10"
+            android:hint="Notes"
+            android:lines="20"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/purchaseSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="161dp"
+            android:layout_marginTop="574dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginBottom="109dp"
+            android:onClick="savePurchase"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/purchaseTitleScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="1dp">
+
+        <Button
+            android:id="@+id/otherPurchaseButton"
+            android:layout_width="111dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="623dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="43dp"
+            android:onClick="createPurchase"
+            android:tag="Other"
+            android:text="other"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/shopsTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="108dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/costcoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="Costco"
+                    app:srcCompat="@drawable/costco" />
+
+                <ImageButton
+                    android:id="@+id/aldiButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="Aldi"
+                    app:srcCompat="@drawable/aldi" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/asdaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="Asda"
+                    app:srcCompat="@drawable/asda" />
+
+                <ImageButton
+                    android:id="@+id/tescoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="Tesco"
+                    app:srcCompat="@drawable/tesco" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/sainsburysButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="Sainsburys"
+                    app:srcCompat="@drawable/sainsburys" />
+
+                <ImageButton
+                    android:id="@+id/MnSButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="MnS"
+                    app:srcCompat="@drawable/ms" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/petrolButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="Petrol"
+                    app:srcCompat="@drawable/petrol2" />
+
+                <ImageButton
+                    android:id="@+id/restaurantButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120sp"
+                    android:layout_margin="12sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#FFFFFF"
+                    android:onClick="createPurchase"
+                    android:padding="22sp"
+                    android:scaleType="fitCenter"
+                    android:tag="Meal"
+                    app:srcCompat="@drawable/restaurantpng" />
+            </TableRow>
+
+        </TableLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
